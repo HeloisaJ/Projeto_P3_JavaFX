@@ -1,4 +1,4 @@
-package TipoPessoa;
+package TipoPessoa.Cliente;
 
 
 public enum SituacaoEnum {
