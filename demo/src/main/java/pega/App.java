@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import Funcionario.ListaFuncionarios;
+import Quarto.SistemaDeQuartos;
+import Sistema.SistemaRecepcionista;
+
 /**
  * JavaFX App
  */
@@ -15,6 +19,10 @@ public class App extends Application {
 
     private static Scene scene;
     public static Stage stage;
+    public ListaFuncionarios lista;
+    public SistemaRecepcionista sistema;
+    public SistemaDeQuartos sq;
+
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -23,6 +31,9 @@ public class App extends Application {
         stage.setTitle("Tela incial");
         stage.show();
         this.stage = stage;
+        lista = new ListaFuncionarios();
+        sistema = new SistemaRecepcionista();
+        sq = new SistemaDeQuartos();
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -43,4 +54,7 @@ public class App extends Application {
         launch();
     }
     
+    public ListaFuncionarios getLista(){
+        return this.lista;
     }
+}
