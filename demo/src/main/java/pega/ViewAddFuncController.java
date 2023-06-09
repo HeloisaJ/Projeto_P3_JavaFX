@@ -12,6 +12,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import pega.ThrowAlerta;
+
 public class ViewAddFuncController {
     @FXML
     private Button btRegistrar;
@@ -19,40 +21,31 @@ public class ViewAddFuncController {
     private Button btVoltarlogin;
     @FXML
     private TextField txtnome;
-        @FXML
+    @FXML
     private TextField txttelefone;
-            @FXML
+    @FXML
     private TextField txtcpf;
-        @FXML
+    @FXML
     private TextField txtsenha;
-            @FXML
+    @FXML
     private TextField txtturno;
-    
-
-    public void initialize(){
-
-    }
 
     @FXML
     private void btRegistrar() throws IOException{
         try{
             String nome = txtnome.getText();
-            String telefone = txttelefone.getText();
             String cpf = txtcpf.getText();
+            String telefone = txttelefone.getText();
             String senha = txtsenha.getText();
             String turno = txtturno.getText();
             turno = turno.toLowerCase();
 
-            ListaFuncionarios.cadastrarFuncionario(nome, telefone, cpf, senha, turno);
+            ListaFuncionarios.cadastrarFuncionario(nome, cpf, telefone, turno, senha);
         }
-        catch (NomeException | CpfException | CelularException | TurnoException | SenhaException e) {
-            Alert alerta = new Alert(Alert.AlertType.ERROR);
-            alerta.setTitle("Erro no cadastro");
-            alerta.setHeaderText("Erro nos dados do cadastro");
-            alerta.setContentText(e.getMessage());
-            alerta.showAndWait();
+        catch(Exception e){
+            //toda vez que quiser lancar um alerta, chamar a classe e a funcao, depois digitar o titulo e a mensagem que querem
+            ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());
         }
-
     }
 
     @FXML
