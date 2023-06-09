@@ -8,6 +8,7 @@ import Exceptions.SenhaException;
 import Exceptions.TurnoException;
 import Funcionario.ListaFuncionarios;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -28,10 +29,12 @@ public class ViewAddFuncController {
     private TextField txtturno;
     
 
+    public void initialize(){
 
-        @FXML
+    }
+
+    @FXML
     private void btRegistrar() throws IOException{
-        //logica do registrar aqui
         try{
             String nome = txtnome.getText();
             String telefone = txttelefone.getText();
@@ -39,10 +42,15 @@ public class ViewAddFuncController {
             String senha = txtsenha.getText();
             String turno = txtturno.getText();
             turno = turno.toLowerCase();
-            
+
+            ListaFuncionarios.cadastrarFuncionario(nome, telefone, cpf, senha, turno);
         }
         catch (NomeException | CpfException | CelularException | TurnoException | SenhaException e) {
-            System.out.println("Erro nos dados do cadastro: " + e.getMessage());
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Erro no cadastro");
+            alerta.setHeaderText("Erro nos dados do cadastro");
+            alerta.setContentText(e.getMessage());
+            alerta.showAndWait();
         }
 
     }

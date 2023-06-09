@@ -11,13 +11,13 @@ import Exceptions.TurnoException;
 
 public class ListaFuncionarios {
     
-    private LinkedList<Funcionario> funcionarios;
+    private static LinkedList<Funcionario> funcionarios = new LinkedList<>();
 
-    public ListaFuncionarios(){
+    /*public ListaFuncionarios(){
         this.funcionarios = new LinkedList<Funcionario>();
-    }
+    }*/
 
-    public void cadastrarFuncionario(String nome, String cpf, String celular, String turno, String senha) throws CpfException, NomeException, CelularException, TurnoException, SenhaException{
+    public static void cadastrarFuncionario(String nome, String cpf, String celular, String turno, String senha) throws CpfException, NomeException, CelularException, TurnoException, SenhaException{
         Funcionario novo = new Funcionario(nome, cpf, celular, turno, senha);
         funcionarios.add(novo);
     }
