@@ -8,9 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import Funcionario.ListaFuncionarios;
 import Quarto.SistemaDeQuartos;
-import Sistema.SistemaRecepcionista;
 
 /**
  * JavaFX App
@@ -27,6 +25,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.setTitle("Tela incial");
         stage.show();
+        SistemaDeQuartos.inicializarQuartos();
         this.stage = stage;
     }
 

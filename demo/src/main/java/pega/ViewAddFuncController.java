@@ -1,18 +1,10 @@
 package pega;
 import java.io.IOException;
 
-import Exceptions.CelularException;
-import Exceptions.CpfException;
-import Exceptions.NomeException;
-import Exceptions.SenhaException;
-import Exceptions.TurnoException;
 import Funcionario.ListaFuncionarios;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
-import pega.ThrowAlerta;
 
 public class ViewAddFuncController {
     @FXML

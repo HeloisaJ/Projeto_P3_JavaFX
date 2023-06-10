@@ -1,25 +1,25 @@
 package Quarto;
 public class SistemaDeQuartos {
     
-    private Quarto quantQuartos [][];
-    private int numeroQuartosOcupados;
-    private final int QUARTOS_POR_ANDAR = 6;
-    private final int NUMERO_ANDARES = 6;
+    private static int numeroQuartosOcupados;
+    private static final int QUARTOS_POR_ANDAR = 6;
+    private static final int NUMERO_ANDARES = 6;
+    private static Quarto quantQuartos [][] = new Quarto [QUARTOS_POR_ANDAR][NUMERO_ANDARES];
 
-    public SistemaDeQuartos(){
+    /*public SistemaDeQuartos(){
         this.quantQuartos = new Quarto [QUARTOS_POR_ANDAR][NUMERO_ANDARES];
         inicializarQuartos();
-    }
+    }*/
 
-    public void inicializarQuartos(){
+    public static void inicializarQuartos(){
         for(int i = 0; i < QUARTOS_POR_ANDAR; i++){
             for(int j = 0; j < NUMERO_ANDARES; j++){
-                this.quantQuartos[i][j] = new Quarto(casalOuSolteiro(j));
+                quantQuartos[i][j] = new Quarto(casalOuSolteiro(j));
             }
         }
     }
 
-    private boolean casalOuSolteiro(int j){
+    private static boolean casalOuSolteiro(int j){
         if(j % 2 == 0){
             return true;
         }
@@ -28,8 +28,8 @@ public class SistemaDeQuartos {
         }
     }
 
-    public int buscarQuarto(Quarto modelo){
-        if(this.numeroQuartosOcupados == QUARTOS_POR_ANDAR * NUMERO_ANDARES){ // Ver se todos os quartos estão ocupados
+    public static int buscarQuarto(Quarto modelo){
+        if(numeroQuartosOcupados == QUARTOS_POR_ANDAR * NUMERO_ANDARES){ // Ver se todos os quartos estão ocupados
             return -1;
         }
         
@@ -54,19 +54,19 @@ public class SistemaDeQuartos {
         return chave;
     }
 
-    private int calculoDaChave(int i, int j){
+    private static int calculoDaChave(int i, int j){
         return (i + 1) * 100 + (j + 1);
     }
 
-    public void checkOutDoCliente(int chave){
-        this.quantQuartos[converterChaveI(chave)][converterChaveJ(chave)].setDisponivel(true);
+    public static void checkOutDoCliente(int chave){
+        quantQuartos[converterChaveI(chave)][converterChaveJ(chave)].setDisponivel(true);
     }
 
-    private int converterChaveI(int chave){
+    private static int converterChaveI(int chave){
         return chave/100 - 1;
     }
 
-    private int converterChaveJ(int chave){
+    private static int converterChaveJ(int chave){
         return chave % 100 - 1;
     }
 }

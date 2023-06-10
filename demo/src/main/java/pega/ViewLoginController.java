@@ -1,6 +1,7 @@
 package pega;
 import java.io.IOException;
 
+import Funcionario.ListaFuncionarios;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -18,12 +19,15 @@ public class ViewLoginController {
 
     @FXML
     private void onBtLoginLogin() throws IOException{
-        String nomeFuncionario = txtNome.getText();
-        String senhaFuncionario = txtSenha.getText();
-        //funcao mudar de tela fica na logica do login quando for certo ir pra area cliente
-        App.setRoot("viewcliente");
-        
-
+        try{
+            String nomeFuncionario = txtNome.getText();
+            String senhaFuncionario = txtSenha.getText();
+            ListaFuncionarios.loginFuncionario(nomeFuncionario, senhaFuncionario);
+            App.setRoot("viewcliente");
+        }
+        catch (Exception e) {
+            ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());
+        } 
     }
 
     @FXML

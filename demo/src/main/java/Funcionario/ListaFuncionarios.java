@@ -22,7 +22,7 @@ public class ListaFuncionarios {
         funcionarios.add(novo);
     }
 
-    public void loginFuncionario(String nome, String senha) throws NomeException, FuncionarioException, SenhaException{
+    public static void loginFuncionario(String nome, String senha) throws NomeException, FuncionarioException, SenhaException{
         Funcionario funcionarioParaLogin = new Funcionario(nome, senha);
         int x = buscarFuncionario(funcionarioParaLogin);
         if(x == -2){
@@ -33,7 +33,7 @@ public class ListaFuncionarios {
         }
     }
 
-    private int buscarFuncionario(Funcionario x){
+    private static int buscarFuncionario(Funcionario x){
         int size = funcionarios.size(); 
         if(size == 0){
             return -2;
@@ -46,7 +46,7 @@ public class ListaFuncionarios {
         return -1;
     }
 
-    public void removerFuncionario(String nome, String senha) throws NomeException, FuncionarioException, SenhaException{
+    public static void removerFuncionario(String nome, String senha) throws NomeException, FuncionarioException, SenhaException{
         Funcionario removido = new Funcionario(nome, senha); // Preciso ver isso com Pedro
         int x = buscarFuncionario(removido);
         if(x == -2){
@@ -60,7 +60,7 @@ public class ListaFuncionarios {
         }
     }
 
-    public void exibirFuncionarios() throws FuncionarioException{
+    public static void exibirFuncionarios() throws FuncionarioException{
         int size = funcionarios.size();
         if(size == 0){
             throw new FuncionarioException("A lista de funcionários está vazia, não foi possível realizar esta ação.");

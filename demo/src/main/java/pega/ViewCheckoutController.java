@@ -1,6 +1,8 @@
 package pega;
 import java.io.IOException;
 
+import Sistema.SistemaRecepcionista;
+import TipoPessoa.Cliente.Cliente;
 import javafx.fxml.FXML;
 //import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -20,9 +22,15 @@ public class ViewCheckoutController {
 
     @FXML
     private void btCheckin() throws IOException{
-        String nomeCliente = txtNome.getText();
-        String cpfCliente = txtCPF.getText();
-
+        try{
+            String nomeCliente = txtNome.getText();
+            String cpfCliente = txtCPF.getText();
+            Cliente n = new Cliente(nomeCliente, cpfCliente);
+            SistemaRecepcionista.checkOut(n);
+        }
+        catch(Exception e){
+            ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());
+        }
     }
 
     @FXML
