@@ -7,7 +7,7 @@ public class ViewClienteController implements inface{
     @FXML
     private Button btSairConta;
     @FXML
-    private Button btreserva;
+    private Button btChequeQuarto;
     @FXML
     private Button btCheckin;
     @FXML
@@ -22,7 +22,7 @@ public class ViewClienteController implements inface{
 
 
     @FXML
-    public void onbtreserva() throws IOException{
+    public void onbtChequeQuarto() throws IOException{
         App.setRoot("viewquarto");
     }
     @FXML

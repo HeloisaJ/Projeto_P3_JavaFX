@@ -13,22 +13,26 @@ public class ViewControllerQuarto {
     @FXML
     private TextField tipoCama;
     @FXML
-    private Button rgistrarClient;
+    private Button registrarClient;
     @FXML 
     private Label Chave;
 
     
-
+    @FXML
     public void onBtchequeDisponibilidade() {
         String tipoCamaStr = tipoCama.getText();
         int tipoCamaNum = Integer.parseInt(tipoCamaStr);
 
         if (tipoCamaNum != -1 && tipoCamaNum != -2) {
-            rgistrarClient.setVisible(true);
+            registrarClient.setVisible(true);
             Chave.setText("tipoCamaNum");
         } else {
-            rgistrarClient.setVisible(false);
+            registrarClient.setVisible(false);
         }
+    }
+    @FXML
+    private void onBtregistrarClient() throws IOException{
+        
     }
 
     @FXML
