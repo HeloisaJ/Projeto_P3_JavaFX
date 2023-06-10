@@ -20,7 +20,7 @@ public class ViewInicialController implements inface{
 
     }
     @FXML
-    private void btremoveFunc() throws IOException{
+    private void onbtremoveFunc() throws IOException{
         App.stage.setTitle("Tela de remoção");
         App.setRoot("viewremovefunc");
 
