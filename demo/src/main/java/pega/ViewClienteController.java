@@ -22,8 +22,8 @@ public class ViewClienteController implements inface{
 
 
     @FXML
-    public void btreserva() throws IOException{
-        App.setRoot("viewreserva");
+    public void onbtreserva() throws IOException{
+        App.setRoot("viewquarto");
     }
     @FXML
     public void btSairConta() throws IOException{

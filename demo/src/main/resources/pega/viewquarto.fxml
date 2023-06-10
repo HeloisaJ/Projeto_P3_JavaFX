@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pega.ViewControllerQuarto">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <AnchorPane prefHeight="493.0" prefWidth="496.0">
+         <children>
+            <Button fx:id="chequeDisponibilidade" layoutX="179.0" layoutY="181.0" mnemonicParsing="false" onAction="#onBtchequeDisponibilidade" text="cheque disponibilidade" textAlignment="CENTER" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btVoltarlogin" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#btVoltarlogin" text="Voltar tela inicial" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tipoCama" alignment="CENTER" layoutX="185.0" layoutY="129.0" prefHeight="36.0" prefWidth="138.0" promptText="solteiro/casal" />
+            <Label layoutX="159.0" layoutY="35.0" text="Checagem de quartos" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="129.0" prefHeight="36.0" prefWidth="138.0" text="# tipo do quarto =" textAlignment="CENTER" textFill="#f01d07">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="Chave" layoutX="288.0" layoutY="292.0" text="Label" textFill="#f01d07" />
+            <Label layoutX="171.0" layoutY="283.0" prefHeight="36.0" prefWidth="138.0" text="chave encontrada =" textAlignment="CENTER" textFill="#f01d07">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="rgistrarClient" layoutX="192.0" layoutY="318.0" mnemonicParsing="false" onAction="#rgistrarClient" prefHeight="23.0" prefWidth="124.0" text="Registrar cliente " textAlignment="CENTER" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

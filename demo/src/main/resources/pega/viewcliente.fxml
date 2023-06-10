@@ -13,22 +13,22 @@
    <children>
       <AnchorPane prefHeight="484.0" prefWidth="476.0">
          <children>
-            <Button fx:id="btreserva" layoutX="180.0" layoutY="101.0" mnemonicParsing="false" onAction="#btreserva" prefWidth="100.0" text="Reserva" textFill="#970b0b">
+            <Button fx:id="btreserva" layoutX="141.0" layoutY="100.0" mnemonicParsing="false" onAction="#onbtreserva" prefHeight="25.0" prefWidth="180.0" text="Reserva" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btCheckin" layoutX="172.0" layoutY="139.0" mnemonicParsing="false" onAction="#btCheckin" text="Realizar Check-in" textFill="#970b0b">
+            <Button fx:id="btCheckin" layoutX="141.0" layoutY="140.0" mnemonicParsing="false" onAction="#btCheckin" prefHeight="25.0" prefWidth="180.0" text="Realizar Check-in" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btCheckout" layoutX="170.0" layoutY="181.0" mnemonicParsing="false" onAction="#btCheckout" text="Realizar Checkout" textFill="#970b0b">
+            <Button fx:id="btCheckout" layoutX="141.0" layoutY="180.0" mnemonicParsing="false" onAction="#btCheckout" prefHeight="25.0" prefWidth="180.0" text="Realizar Checkout" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btExibirCheckin" layoutX="141.0" layoutY="219.0" mnemonicParsing="false" onAction="#btExibirCheckin" text="Exibir clientes para Check-in" textFill="#970b0b">
+            <Button fx:id="btExibirCheckin" layoutX="141.0" layoutY="220.0" mnemonicParsing="false" onAction="#btExibirCheckin" prefHeight="25.0" prefWidth="180.0" text="Exibir clientes para Check-in" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
@@ -38,12 +38,12 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btExibirCheckout" layoutX="139.0" layoutY="258.0" mnemonicParsing="false" onAction="#btExibirCheckout" text="Exibir clientes para Checkout" textFill="#970b0b">
+            <Button fx:id="btExibirCheckout" layoutX="141.0" layoutY="260.0" mnemonicParsing="false" onAction="#btExibirCheckout" prefHeight="25.0" prefWidth="180.0" text="Exibir clientes para Checkout" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btExibirTodos" layoutX="162.0" layoutY="297.0" mnemonicParsing="false" onAction="#btExibirTodos" text="Exibir Todos clientes" textFill="#970b0b">
+            <Button fx:id="btExibirTodos" layoutX="141.0" layoutY="300.0" mnemonicParsing="false" onAction="#btExibirTodos" prefHeight="25.0" prefWidth="180.0" text="Exibir Todos clientes" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
