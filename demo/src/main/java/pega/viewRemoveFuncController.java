@@ -25,6 +25,7 @@ public class viewRemoveFuncController {
             String nomeFuncionario = txtNome.getText();
             String senhaFuncionario = txtSenha.getText();
             ListaFuncionarios.removerFuncionario(nomeFuncionario, senhaFuncionario);
+            ThrowAlerta.exibirAlertaConfirmacao("SUCESSO", "Funcionário removido do sistema com sucesso!");
         }
         catch(Exception e){
             ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());

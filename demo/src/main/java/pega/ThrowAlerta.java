@@ -11,4 +11,12 @@ public class ThrowAlerta {
         alert.setContentText(mensagem);
         alert.showAndWait();
     }
+
+    public static void exibirAlertaConfirmacao(String titulo, String mensagem) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
+    }
 }
