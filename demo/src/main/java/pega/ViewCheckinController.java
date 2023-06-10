@@ -27,6 +27,7 @@ public class ViewCheckinController {
             String cpfCliente = txtCPF.getText();
             Cliente n = new Cliente(nomeCliente, cpfCliente);
             SistemaRecepcionista.checkIn(n);
+            ThrowAlerta.exibirAlertaConfirmacao("SUCESSO", "Check-in do cliente realizado com sucesso !");
         }
         catch(Exception e){
             ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());

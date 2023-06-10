@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.LinkedList;
 
 import Exceptions.CelularException;
+import Exceptions.ClienteException;
 import Exceptions.CpfException;
 import Exceptions.DataException;
 import Exceptions.NomeException;
@@ -24,40 +25,37 @@ public class SistemaRecepcionista {
     public static void reserva(String nome, String cpf, String celular, int diasHospedagem, Calendar diaDoCheckIn, boolean tipoCama, int chave, char extras) throws CpfException, NomeException, DataException, OpcaoExtrasException, CelularException{
         Cliente novo = new Cliente(nome, cpf, celular, diasHospedagem, diaDoCheckIn, tipoCama, chave, extras);
         clientesParaCheckIn.addLast(novo);
-        System.out.println("Novo cliente adicionado com sucesso !");
     }
 
-    public static void checkIn(Cliente n) throws IndexOutOfBoundsException{ // n só terá nome e cpf
+    public static void checkIn(Cliente n) throws IndexOutOfBoundsException, DataException, ClienteException{ // n só terá nome e cpf
         int posicao = buscarCliente(n, clientesParaCheckIn);
         if(posicao == -1){
-            System.out.println("Cliente não encontrado, tente novamente !");
+            throw new ClienteException("Cliente não encontrado, tente novamente !");
         }
         else if(!compareData(clientesParaCheckIn.get(posicao).getDiaCheckIn())){
-            System.out.println("Hoje não é o dia do check-in deste cliente !");
+            throw new DataException("Hoje não é o dia do check-in deste cliente !");
         }
         else{
             Cliente novoClienteHospedado = clientesParaCheckIn.get(posicao);
             novoClienteHospedado.setSituacao();
             clientesHospedados.addLast(novoClienteHospedado);
             clientesParaCheckIn.remove(novoClienteHospedado);
-            System.out.println("Check-in do cliente realizado com sucesso !");
         }
     }
 
-    public static void checkOut(Cliente n) throws IndexOutOfBoundsException{
+    public static double checkOut(Cliente n) throws IndexOutOfBoundsException, DataException, ClienteException{
         int posicao = buscarCliente(n, clientesHospedados);
         if(posicao == -1){
-            System.out.println("Cliente não encontrado, tente novamente !");
+            throw new ClienteException("Cliente não encontrado, tente novamente !");
         }
         else if(!compareData(clientesHospedados.get(posicao).getDiaDoCheckOut())){
-            System.out.println("Hoje não é o dia do check-out deste cliente !");
+            throw new DataException("Hoje não é o dia do check-out deste cliente !");
         }
         else{
             Cliente clienteParaCheckOut = clientesHospedados.get(posicao);
             SistemaDeQuartos.checkOutDoCliente(clienteParaCheckOut.getChave()); 
             clientesHospedados.remove(clienteParaCheckOut); 
-            System.out.println("Check out do cliente realizado com sucesso !");
-            System.out.println("Custo total da estadia desse cliente no hotel: " + clienteParaCheckOut.custoTotal());
+            return clienteParaCheckOut.custoTotal();
         }
     }
 
@@ -76,7 +74,7 @@ public class SistemaRecepcionista {
         return -1;
     }
 
-    public static void exibirClientesParaCheckInHoje() throws IndexOutOfBoundsException{
+    public static void exibirClientesParaCheckInHoje() throws IndexOutOfBoundsException, DataException{
         int size = clientesParaCheckIn.size();
         if(size == 0){
             throw new IndexOutOfBoundsException("Nenhum cliente para realizar o check-in no momento.");
@@ -91,21 +89,21 @@ public class SistemaRecepcionista {
             }
 
             if(vazio){
-                System.out.println("Nenhum cliente com check-in marcado para hoje.");
+                throw new DataException("Nenhum cliente com check-in marcado para hoje.");
             }
         }
     }
 
-    public static void exibirClientesHospedados(){
+    public static void exibirClientesHospedados() throws ClienteException{
         if(clientesHospedados.size() == 0){
-            System.out.println("Nenhum cliente hospedado no momento.");
+            throw new ClienteException("Nenhum cliente hospedado no momento.");
         }
         else{
             percorrerLista(clientesHospedados);
         }
     }
 
-    public static void exibirClientesParaCheckOutHoje() throws IndexOutOfBoundsException{ 
+    public static void exibirClientesParaCheckOutHoje() throws IndexOutOfBoundsException, DataException{ 
         int size = clientesHospedados.size();
         if(size == 0){
             throw new IndexOutOfBoundsException("Nenhum cliente hospedado no momento.");
@@ -120,18 +118,17 @@ public class SistemaRecepcionista {
             }
 
             if(vazio){
-                System.out.println("Nenhum cliente com check-out marcado para hoje.");
+                throw new DataException("Nenhum cliente com check-out marcado para hoje.");
             }
         }
     }
 
-    public static void exibirTodosOsClientes(){
+    public static void exibirTodosOsClientes() throws ClienteException{
         if(clientesParaCheckIn.size() == 0){
-            System.out.println("Nenhum cliente para realizar o check-in no momento.");
+            throw new ClienteException("Nenhum cliente para realizar o check-in no momento.");
         }
         else{
             percorrerLista(clientesParaCheckIn);
-            System.out.println();
         }
         
         exibirClientesHospedados();

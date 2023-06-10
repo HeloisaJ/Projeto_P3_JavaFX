@@ -33,6 +33,7 @@ public class ViewAddFuncController {
             turno = turno.toLowerCase();
 
             ListaFuncionarios.cadastrarFuncionario(nome, cpf, telefone, turno, senha);
+            ThrowAlerta.exibirAlertaConfirmacao("SUCESSO", "Funcionário cadastrado com sucesso!");
         }
         catch(Exception e){
             //toda vez que quiser lancar um alerta, chamar a classe e a funcao, depois digitar o titulo e a mensagem que querem

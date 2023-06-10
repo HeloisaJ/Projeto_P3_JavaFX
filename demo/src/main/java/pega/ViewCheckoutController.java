@@ -26,7 +26,8 @@ public class ViewCheckoutController {
             String nomeCliente = txtNome.getText();
             String cpfCliente = txtCPF.getText();
             Cliente n = new Cliente(nomeCliente, cpfCliente);
-            SistemaRecepcionista.checkOut(n);
+            double custo = SistemaRecepcionista.checkOut(n);
+            ThrowAlerta.exibirAlertaConfirmacao("SUCESSO", "Check out do cliente realizado com sucesso !\nCusto total da estadia desse cliente no hotel: " + custo);
         }
         catch(Exception e){
             ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());
