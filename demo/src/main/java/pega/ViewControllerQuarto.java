@@ -24,22 +24,26 @@ public class ViewControllerQuarto {
         int tipoCamaNum = Integer.parseInt(tipoCamaStr);
 
         if (tipoCamaNum != -1 && tipoCamaNum != -2) {
+            //opção de entrada esperada botão aparece
             registrarClient.setVisible(true);
             Chave.setText("tipoCamaNum");
         } else {
-            registrarClient.setVisible(false);
+            //se a opção nao for esperada aplica exeção avisando porque e ele continua sem aparecer
         }
     }
     @FXML
     private void onBtregistrarClient() throws IOException{
+        //mudança de tela para completar preenchimento de dados
+        App.setRoot("viewaddcliente");
         
     }
 
     @FXML
     private void btVoltarlogin() throws IOException{
-        App.setRoot("viewinicial");
+        App.setRoot("viewcliente");
 
     }
+    
 
     
 }

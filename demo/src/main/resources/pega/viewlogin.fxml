@@ -15,21 +15,26 @@
    <children>
       <AnchorPane prefHeight="493.0" prefWidth="496.0">
          <children>
-            <Button fx:id="btLoginLogin" layoutX="233.0" layoutY="251.0" mnemonicParsing="false" onAction="#onBtLoginLogin" text="login" textAlignment="CENTER" textFill="#970b0b">
+            <Button fx:id="btLoginLogin" layoutX="208.0" layoutY="260.0" mnemonicParsing="false" onAction="#onBtLoginLogin" text="login" textAlignment="CENTER" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btVoltarlogin" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#btVoltarlogin" text="Voltar tela inicial" textFill="#970b0b">
+            <Button fx:id="btVoltarlogin" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#btVoltarlogin" text="Voltar " textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="txtSenha" layoutX="186.0" layoutY="194.0" prefHeight="36.0" prefWidth="138.0" promptText="Senha do funcionário" />
-            <TextField fx:id="txtNome" layoutX="184.0" layoutY="138.0" prefHeight="36.0" prefWidth="138.0" promptText="Nome do funcionário " />
-            <Label layoutX="185.0" layoutY="97.0" text="Digite os dados de login" textFill="#970b0b">
+            <TextField fx:id="txtSenha" layoutX="161.0" layoutY="200.0" prefHeight="36.0" prefWidth="138.0" promptText="Senha:" />
+            <TextField fx:id="txtNome" layoutX="161.0" layoutY="150.0" prefHeight="36.0" prefWidth="138.0" promptText="Nome:" />
+            <Label layoutX="182.0" layoutY="121.0" text="Dados Funcionario" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="52.0" text="Área de login" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
          </children>

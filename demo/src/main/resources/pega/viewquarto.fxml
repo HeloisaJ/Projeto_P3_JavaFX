@@ -15,34 +15,37 @@
    <children>
       <AnchorPane prefHeight="493.0" prefWidth="496.0">
          <children>
-            <Button fx:id="chequeDisponibilidade" layoutX="179.0" layoutY="181.0" mnemonicParsing="false" onAction="#onBtchequeDisponibilidade" text="cheque disponibilidade" textAlignment="CENTER" textFill="#970b0b">
+            <Button fx:id="chequeDisponibilidade" layoutX="155.0" layoutY="176.0" mnemonicParsing="false" onAction="#onBtchequeDisponibilidade" text="cheque disponibilidade" textAlignment="CENTER" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btVoltarlogin" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#btVoltarlogin" text="Voltar tela inicial" textFill="#970b0b">
+            <Button fx:id="btVoltarlogin" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#btVoltarlogin" text="Voltar" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="tipoCama" alignment="CENTER" layoutX="185.0" layoutY="129.0" prefHeight="36.0" prefWidth="138.0" promptText="solteiro/casal" />
+            <TextField fx:id="tipoCama" alignment="CENTER" layoutX="171.0" layoutY="128.0" prefHeight="25.0" prefWidth="120.0" promptText="solteiro/casal" />
             <Label layoutX="159.0" layoutY="35.0" text="Checagem de quartos" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="90.0" layoutY="129.0" prefHeight="36.0" prefWidth="138.0" text="# tipo do quarto =" textAlignment="CENTER" textFill="#f01d07">
+            <Label layoutX="185.0" layoutY="92.0" prefHeight="36.0" prefWidth="138.0" text="Tipo de quarto" textAlignment="CENTER" textFill="#970b0b">
                <font>
-                  <Font name="Arial Italic" size="12.0" />
+                  <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="Chave" layoutX="288.0" layoutY="292.0" text="Label" textFill="#f01d07" />
-            <Label layoutX="171.0" layoutY="283.0" prefHeight="36.0" prefWidth="138.0" text="chave encontrada =" textAlignment="CENTER" textFill="#f01d07">
+            <Label fx:id="Chave" layoutX="230.0" layoutY="240.0" text="Label" textFill="#970b0b">
                <font>
-                  <Font name="Arial Italic" size="12.0" />
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Label layoutX="116.0" layoutY="230.0" prefHeight="36.0" prefWidth="138.0" text="chave encontrada =" textAlignment="CENTER" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="registrarClient" layoutX="192.0" layoutY="318.0" mnemonicParsing="false" onAction="#onBtregistrarClient" prefHeight="23.0" prefWidth="124.0" text="Registrar cliente " textAlignment="CENTER" textFill="#970b0b">
+            <Button fx:id="registrarClient" layoutX="182.0" layoutY="287.0" mnemonicParsing="false" onAction="#onBtregistrarClient" prefHeight="23.0" prefWidth="124.0" text="Registrar cliente " textAlignment="CENTER" textFill="#970b0b" visible="false">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>

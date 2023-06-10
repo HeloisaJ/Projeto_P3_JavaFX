@@ -15,7 +15,7 @@
    <children>
       <AnchorPane prefHeight="493.0" prefWidth="496.0">
          <children>
-            <Button fx:id="btCheckin" layoutX="174.0" layoutY="263.0" mnemonicParsing="false" onAction="#btCheckin" text="Efetuar Checkout" textAlignment="CENTER" textFill="#970b0b">
+            <Button fx:id="btCheckin" layoutX="175.0" layoutY="260.0" mnemonicParsing="false" onAction="#btCheckin" text="Efetuar Check out" textAlignment="CENTER" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
@@ -25,11 +25,16 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="txtCPF" layoutX="161.0" layoutY="202.0" prefHeight="36.0" prefWidth="138.0" promptText="CPF do clliente" />
-            <TextField fx:id="txtNome" layoutX="161.0" layoutY="150.0" prefHeight="36.0" prefWidth="138.0" promptText="Nome do cleinte" />
-            <Label layoutX="175.0" layoutY="119.0" text="Checkout do cliente" textFill="#970b0b">
+            <TextField fx:id="txtCPF" layoutX="161.0" layoutY="200.0" prefHeight="36.0" prefWidth="138.0" promptText="CPF:" />
+            <TextField fx:id="txtNome" layoutX="161.0" layoutY="150.0" prefHeight="36.0" prefWidth="138.0" promptText="Nome:" />
+            <Label layoutX="182.0" layoutY="121.0" text="Dados do cliente" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="188.0" layoutY="52.0" text="Check out" textFill="#970b0b">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
          </children>
