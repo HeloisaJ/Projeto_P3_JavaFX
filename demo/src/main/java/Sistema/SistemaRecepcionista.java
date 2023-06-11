@@ -83,70 +83,45 @@ public class SistemaRecepcionista {
         return -1;
     }
 
-    public static void exibirClientesParaCheckInHoje() throws IndexOutOfBoundsException, DataException{
+    public static LinkedList<Cliente> exibirClientesParaCheckInHoje() throws IndexOutOfBoundsException, DataException{
         int size = clientesParaCheckIn.size();
-        if(size == 0){
-            throw new IndexOutOfBoundsException("Nenhum cliente para realizar o check-in no momento.");
-        }
-        else{
-            boolean vazio = true;
-            for(int i = 0; i < size; i++){ 
-                if(compareData(clientesParaCheckIn.get(i).getDiaCheckIn())){ 
-                    System.out.println(clientesParaCheckIn.get(i));
-                    vazio = false;
-                }
-            }
-
-            if(vazio){
-                throw new DataException("Nenhum cliente com check-in marcado para hoje.");
+        LinkedList<Cliente> listaExibir = new LinkedList<>();
+        for(int i = 0; i < size; i++){ 
+            if(compareData(clientesParaCheckIn.get(i).getDiaCheckIn())){ 
+                listaExibir.add(clientesParaCheckIn.get(i));
             }
         }
+        return listaExibir;
     }
 
-    public static void exibirClientesHospedados() throws ClienteException{
-        if(clientesHospedados.size() == 0){
-            throw new ClienteException("Nenhum cliente hospedado no momento.");
-        }
-        else{
-            percorrerLista(clientesHospedados);
-        }
+    public static LinkedList<Cliente> exibirClientesHospedados() throws ClienteException{
+        LinkedList<Cliente> listaExibir = new LinkedList<>();
+        percorrerLista(clientesHospedados, listaExibir);
+        return listaExibir;
     }
 
-    public static void exibirClientesParaCheckOutHoje() throws IndexOutOfBoundsException, DataException{ 
+    public static LinkedList<Cliente> exibirClientesParaCheckOutHoje() throws IndexOutOfBoundsException, DataException{ 
         int size = clientesHospedados.size();
-        if(size == 0){
-            throw new IndexOutOfBoundsException("Nenhum cliente hospedado no momento.");
-        }
-        else{
-            boolean vazio = true;
-            for(int i = 0; i < size; i++){
-                if(compareData(clientesHospedados.get(i).getDiaDoCheckOut())){ 
-                    System.out.println(clientesHospedados.get(i));
-                    vazio = false;
-                }
-            }
-
-            if(vazio){
-                throw new DataException("Nenhum cliente com check-out marcado para hoje.");
+        LinkedList<Cliente> listaExibir = new LinkedList<>();
+        for(int i = 0; i < size; i++){
+            if(compareData(clientesHospedados.get(i).getDiaDoCheckOut())){ 
+                listaExibir.add(clientesHospedados.get(i));
             }
         }
+        return listaExibir;
     }
 
-    public static void exibirTodosOsClientes() throws ClienteException{
-        if(clientesParaCheckIn.size() == 0){
-            throw new ClienteException("Nenhum cliente para realizar o check-in no momento.");
-        }
-        else{
-            percorrerLista(clientesParaCheckIn);
-        }
-        
-        exibirClientesHospedados();
+    public static LinkedList<Cliente> exibirTodosOsClientes() throws ClienteException{
+        LinkedList<Cliente> listaExibir = new LinkedList<>();
+        percorrerLista(clientesParaCheckIn, listaExibir);
+        percorrerLista(clientesHospedados, listaExibir);
+        return listaExibir;
     }
 
-    private static void percorrerLista(LinkedList<Cliente> lista){
+    private static void percorrerLista(LinkedList<Cliente> lista, LinkedList<Cliente> exibir){
         int size = lista.size();
         for(int i = 0; i < size; i++){
-            System.out.println(lista.get(i));
+            exibir.add(lista.get(i));
         }
     }
 }
