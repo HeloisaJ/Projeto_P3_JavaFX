@@ -28,7 +28,7 @@ public class ViewExibirFuncController implements Initializable {
     @FXML
     private TableColumn<Funcionario, String> colunaTurno;
      @FXML
-    private Button btVoltarlogin;
+    private Button btVoltar;
 
 @Override
 public void initialize(URL location, ResourceBundle resources) {
@@ -45,7 +45,7 @@ tabelaFuncionarios.setItems(funcionariosObservable);
 }
 
 @FXML
-private void btVoltarlogin() throws IOException{
+private void onbtVoltar() throws IOException{
     App.setRoot("viewinicial");
 
 }
