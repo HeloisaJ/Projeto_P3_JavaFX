@@ -1,8 +1,6 @@
 package pega;
 
 import javafx.fxml.Initializable;
-import Funcionario.Funcionario;
-import Funcionario.ListaFuncionarios;
 import Sistema.SistemaRecepcionista;
 import TipoPessoa.Cliente.Cliente;
 import javafx.collections.FXCollections;
@@ -47,7 +45,7 @@ public class ViewExibirCheckinController implements Initializable {
         colunaQuarto.setCellValueFactory(new PropertyValueFactory<>("chave"));
         colunaDiaDoCheckIn.setCellValueFactory(new PropertyValueFactory<>("diaDoCheckIn"));
         colunaDiaDoCheckOut.setCellValueFactory(new PropertyValueFactory<>("diaDoCheckOut"));
-        colunaDiaDoCheckOut.setCellValueFactory(new PropertyValueFactory<>("situacao"));
+        colunaSituacao.setCellValueFactory(new PropertyValueFactory<>("situacao"));
 
         //adiciona os objetos da lista encadeada ao TableView
         LinkedList<Cliente> clientes = SistemaRecepcionista.exibirClientesParaCheckInHoje();

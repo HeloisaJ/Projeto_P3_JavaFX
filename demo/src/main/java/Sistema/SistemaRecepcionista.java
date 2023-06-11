@@ -41,7 +41,7 @@ public class SistemaRecepcionista {
         if(posicao == -1){
             throw new ClienteException("Cliente não encontrado, tente novamente !");
         }
-        else if(!compareData(clientesParaCheckIn.get(posicao).getDiaCheckIn())){
+        else if(!compareData(clientesParaCheckIn.get(posicao).DiaDoCheckIn())){
             throw new DataException("Hoje não é o dia do check-in deste cliente !");
         }
         else{
@@ -57,7 +57,7 @@ public class SistemaRecepcionista {
         if(posicao == -1){
             throw new ClienteException("Cliente não encontrado, tente novamente !");
         }
-        else if(!compareData(clientesHospedados.get(posicao).getDiaDoCheckOut())){
+        else if(!compareData(clientesHospedados.get(posicao).DiaDoCheckOut())){
             throw new DataException("Hoje não é o dia do check-out deste cliente !");
         }
         else{
@@ -87,7 +87,7 @@ public class SistemaRecepcionista {
         int size = clientesParaCheckIn.size();
         LinkedList<Cliente> listaExibir = new LinkedList<>();
         for(int i = 0; i < size; i++){ 
-            if(compareData(clientesParaCheckIn.get(i).getDiaCheckIn())){ 
+            if(compareData(clientesParaCheckIn.get(i).DiaDoCheckIn())){ 
                 listaExibir.add(clientesParaCheckIn.get(i));
             }
         }
@@ -104,7 +104,7 @@ public class SistemaRecepcionista {
         int size = clientesHospedados.size();
         LinkedList<Cliente> listaExibir = new LinkedList<>();
         for(int i = 0; i < size; i++){
-            if(compareData(clientesHospedados.get(i).getDiaDoCheckOut())){ 
+            if(compareData(clientesHospedados.get(i).DiaDoCheckOut())){ 
                 listaExibir.add(clientesHospedados.get(i));
             }
         }

@@ -56,8 +56,12 @@ public class Cliente extends Pessoa implements ClienteInterface{
         return this.diasDeHospedagem;
     }
 
-    public Calendar getDiaCheckIn(){
+    public Calendar DiaDoCheckIn(){
         return this.diaDoCheckIn;
+    }
+
+    public String getDiaDoCheckIn(){
+        return dataString(this.diaDoCheckIn);
     }
 
     public Calendar diaDoCheckOut(){
@@ -70,8 +74,12 @@ public class Cliente extends Pessoa implements ClienteInterface{
         this.situacao = SituacaoEnum.HOSPEDE;
     }
 
-    public Calendar getDiaDoCheckOut(){
+    public Calendar DiaDoCheckOut(){
         return this.diaDoCheckOut;
+    }
+
+    public String getDiaDoCheckOut(){
+        return dataString(this.diaDoCheckOut);
     }
 
     public int getChave(){ 
@@ -115,6 +123,22 @@ public class Cliente extends Pessoa implements ClienteInterface{
         return data.get(Calendar.DAY_OF_MONTH) + "/" + (data.get(Calendar.MONTH) + 1) + "/" + data.get(Calendar.YEAR);
     }
     
+    public String getNome(){
+        return this.nome;
+    }
+
+    public String getCpf(){
+        return this.cpf;
+    }
+
+    public String getCelular(){
+        return this.celular;
+    }
+
+    public SituacaoEnum getSituacao(){
+        return this.situacao;
+    }
+
     public static final class ClienteBuilder{
         
         private String nome;

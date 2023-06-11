@@ -6,4 +6,5 @@ module pega {
     exports pega;
     opens Funcionario to javafx.base;
     opens Sistema to javafx.base;
+    opens TipoPessoa.Cliente;
 }
