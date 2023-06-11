@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -18,6 +20,14 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
+            <TableView fx:id="tabelaFuncionarios" layoutX="37.0" layoutY="71.0" prefHeight="309.0" prefWidth="395.0">
+              <columns>
+                <TableColumn fx:id="colunaNome" prefWidth="100.0" text="Nome:" />
+                <TableColumn fx:id="colunaCPF" prefWidth="100.0" text="CPF:" />
+                  <TableColumn fx:id="colunaTelefone" prefWidth="100.0" text="Celular:" />
+                  <TableColumn fx:id="colunaTurno" prefWidth="100.0" text="Turno:" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>
