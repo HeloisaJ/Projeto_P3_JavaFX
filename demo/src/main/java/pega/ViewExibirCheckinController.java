@@ -44,7 +44,7 @@ public class ViewExibirCheckinController implements Initializable {
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colunaCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
         colunaTelefone.setCellValueFactory(new PropertyValueFactory<>("celular"));
-        colunaQuarto.setCellValueFactory(new PropertyValueFactory<>("quarto"));
+        colunaQuarto.setCellValueFactory(new PropertyValueFactory<>("chave"));
         colunaDiaDoCheckIn.setCellValueFactory(new PropertyValueFactory<>("diaDoCheckIn"));
         colunaDiaDoCheckOut.setCellValueFactory(new PropertyValueFactory<>("diaDoCheckOut"));
         colunaDiaDoCheckOut.setCellValueFactory(new PropertyValueFactory<>("situacao"));

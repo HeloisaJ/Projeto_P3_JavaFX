@@ -39,10 +39,8 @@ public class ViewAddClienteController {
             String cpf = txtCPF.getText();
             String quantidadeDiasSTR = txtQuantidadeDias.getText();
             int quantidadeDiasNum = Integer.parseInt(quantidadeDiasSTR);
-            System.out.println(quantidadeDiasNum);
             String diaSTR = txtDia.getText();
             int diaNum = Integer.parseInt(diaSTR);
-            System.out.println(diaNum);
             if(diaNum < 1 || diaNum > 31){
                 throw new DataException("Dia inválido! Digite um número entre 1 e 31 !");
             }
@@ -54,7 +52,6 @@ public class ViewAddClienteController {
             mesNum--;
             String anoSTR = txtAno.getText();
             int anoNum = Integer.parseInt(anoSTR);
-            System.out.println(anoNum);
             Calendar diaDoCheckIn = new GregorianCalendar(anoNum, mesNum, diaNum);
             SistemaRecepcionista.reserva(nome, cpf, telefone, quantidadeDiasNum, diaDoCheckIn, tipoCama, chave, 'S');
             ThrowAlerta.exibirAlertaConfirmacao("SUCESSO", "Novo cliente adicionado com sucesso !");
