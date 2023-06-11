@@ -15,6 +15,8 @@ public class ViewAddClienteController {
     @FXML
     private Button btVoltarlogin;
     @FXML
+    private TextField txtextra;
+    @FXML
     private TextField txtnome;
     @FXML
     private TextField txttelefone;
@@ -35,6 +37,7 @@ public class ViewAddClienteController {
             int chave = ViewControllerQuarto.getChave();// usar get na classe controllerquarto pra pegar
             boolean tipoCama = ViewControllerQuarto.getTipoDaCama();
             String nome = txtnome.getText();
+            String extra = txtextra.getText();
             String telefone = txttelefone.getText();
             String cpf = txtCPF.getText();
             String quantidadeDiasSTR = txtQuantidadeDias.getText();
