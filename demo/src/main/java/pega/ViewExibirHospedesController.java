@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
-public class ViewExibirCheckoutcController implements Initializable{
+public class ViewExibirHospedesController implements Initializable{
 
 
      @FXML

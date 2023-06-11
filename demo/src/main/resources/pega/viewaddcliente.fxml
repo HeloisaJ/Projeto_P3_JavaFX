@@ -15,17 +15,17 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="500.0">
          <children>
-            <Label layoutX="164.0" layoutY="80.0" text="digite os dados do cliente" textFill="#960c0c">
+            <Label layoutX="164.0" layoutY="60.0" text="digite os dados do cliente" textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="txtnome" layoutX="163.0" layoutY="100.0" promptText="Nome:" />
-            <TextField fx:id="txttelefone" layoutX="163.0" layoutY="140.0" promptText="Número de Telefone:" />
-            <TextField fx:id="txtQuantidadeDias" layoutX="163.0" layoutY="220.0" promptText="Quantidade de dias:" />
-            <TextField fx:id="txtDia" layoutX="163.0" layoutY="270.0" promptText="Dia:" />
-            <TextField fx:id="txtMes" layoutX="163.0" layoutY="310.0" promptText="Mês:" />
-            <Button fx:id="btRegistrar" layoutX="198.0" layoutY="390.0" mnemonicParsing="false" onAction="#btRegistrar" text="Registrar" textFill="#970b0b">
+            <TextField fx:id="txtnome" layoutX="163.0" layoutY="80.0" promptText="Nome:" />
+            <TextField fx:id="txttelefone" layoutX="163.0" layoutY="110.0" promptText="Número de Telefone:" />
+            <TextField fx:id="txtQuantidadeDias" layoutX="163.0" layoutY="170.0" promptText="Quantidade de dias:" />
+            <TextField fx:id="txtDia" layoutX="163.0" layoutY="300.0" promptText="Dia:" />
+            <TextField fx:id="txtMes" layoutX="163.0" layoutY="330.0" promptText="Mês:" />
+            <Button fx:id="btRegistrar" layoutX="196.0" layoutY="390.0" mnemonicParsing="false" onAction="#btRegistrar" text="Registrar" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
@@ -35,18 +35,25 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Label layoutX="129.0" layoutY="29.0" text="cadastro de hospede " textFill="#960c0c">
+            <Label layoutX="127.0" layoutY="14.0" text="cadastro de hospede " textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="txtAno" layoutX="163.0" layoutY="350.0" promptText="Ano:" />
-            <Label layoutX="190.0" layoutY="255.0" text="Data de check in" textFill="#960c0c">
+            <TextField fx:id="txtAno" layoutX="163.0" layoutY="360.0" promptText="Ano:" />
+            <Label layoutX="183.0" layoutY="280.0" text="Data de check in" textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCPF" layoutX="163.0" layoutY="180.0" promptText="CPF:" />
+            <TextField fx:id="txtCPF" layoutX="163.0" layoutY="140.0" promptText="CPF:" />
+            <TextField fx:id="txtQuantidadeDias1" layoutX="163.0" layoutY="200.0" promptText="Quantidade de dias:" />
+            <Label layoutX="195.0" layoutY="230.0" text="cama extra?" textFill="#960c0c">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtQuantidadeDias11" layoutX="163.0" layoutY="250.0" promptText="sim ou não:" />
          </children>
       </AnchorPane>
    </children>
