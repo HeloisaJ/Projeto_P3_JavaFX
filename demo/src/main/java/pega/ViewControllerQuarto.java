@@ -1,5 +1,9 @@
 package pega;
 import java.io.IOException;
+
+import Exceptions.QuartoException;
+import Quarto.Quarto;
+import Quarto.SistemaDeQuartos;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -20,15 +24,35 @@ public class ViewControllerQuarto {
     
     @FXML
     public void onBtchequeDisponibilidade() {
-        String tipoCamaStr = tipoCama.getText();
-        int tipoCamaNum = Integer.parseInt(tipoCamaStr);
+        try{
+            String tipoCamaStr = tipoCama.getText();
+            tipoCamaStr = tipoCamaStr.toLowerCase();
+            Quarto modelo;
+            if(tipoCamaStr.equals("casal")){
+                modelo = new Quarto(true);
+            }
+            else if(tipoCamaStr.equals("solteiro")){
+                modelo = new Quarto(false);
+            }
+            else{
+                throw new QuartoException("Tipo de cama inválido, digite casal ou solteiro !");
+            }
+            int tipoCamaNum = SistemaDeQuartos.buscarQuarto(modelo);
 
-        if (tipoCamaNum != -1 && tipoCamaNum != -2) {
-            //opção de entrada esperada botão aparece
-            registrarClient.setVisible(true);
-            Chave.setText("tipoCamaNum");
-        } else {
-            //se a opção nao for esperada aplica exeção avisando porque e ele continua sem aparecer
+            if (tipoCamaNum != -1 && tipoCamaNum != -2) {
+                //opção de entrada esperada botão aparece
+                registrarClient.setVisible(true);
+                Chave.setText(String.valueOf(tipoCamaNum));
+            } 
+            else if(tipoCamaNum == -1){
+                throw new QuartoException("Não temos quartos do tipo escolhido disponível no momento !");
+            }
+            else{
+                throw new QuartoException("Quarto não encontrado !");
+            }
+        }
+        catch(Exception e){
+            ThrowAlerta.exibirAlertaErro("ERRO", e.getMessage());
         }
     }
     @FXML
