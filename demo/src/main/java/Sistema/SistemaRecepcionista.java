@@ -23,7 +23,16 @@ public class SistemaRecepcionista {
     }*/
 
     public static void reserva(String nome, String cpf, String celular, int diasHospedagem, Calendar diaDoCheckIn, boolean tipoCama, int chave, char extras) throws CpfException, NomeException, DataException, OpcaoExtrasException, CelularException{
-        Cliente novo = new Cliente(nome, cpf, celular, diasHospedagem, diaDoCheckIn, tipoCama, chave, extras);
+        Cliente novo = new Cliente.ClienteBuilder()
+            .nome(nome)
+            .cpf(cpf)
+            .celular(celular)
+            .diasDeHospedagem(diasHospedagem)
+            .diaDoCheckIn(diaDoCheckIn)
+            .tipoCama(tipoCama)
+            .chave(chave)
+            .extras(extras)
+            .build();
         clientesParaCheckIn.addLast(novo);
     }
 

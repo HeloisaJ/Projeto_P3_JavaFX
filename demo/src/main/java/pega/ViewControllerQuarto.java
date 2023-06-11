@@ -21,6 +21,9 @@ public class ViewControllerQuarto {
     @FXML 
     private Label Chave;
 
+    private static boolean tipoDaCama;
+
+    private static int chave;
     
     @FXML
     public void onBtchequeDisponibilidade() {
@@ -28,21 +31,26 @@ public class ViewControllerQuarto {
             String tipoCamaStr = tipoCama.getText();
             tipoCamaStr = tipoCamaStr.toLowerCase();
             Quarto modelo;
+
             if(tipoCamaStr.equals("casal")){
                 modelo = new Quarto(true);
+                setTipoDaCama(true);
             }
             else if(tipoCamaStr.equals("solteiro")){
                 modelo = new Quarto(false);
+                setTipoDaCama(false);
             }
             else{
                 throw new QuartoException("Tipo de cama inválido, digite casal ou solteiro !");
             }
+
             int tipoCamaNum = SistemaDeQuartos.buscarQuarto(modelo);
 
             if (tipoCamaNum != -1 && tipoCamaNum != -2) {
                 //opção de entrada esperada botão aparece
                 registrarClient.setVisible(true);
                 Chave.setText(String.valueOf(tipoCamaNum));
+                setChave(tipoCamaNum);
             } 
             else if(tipoCamaNum == -1){
                 throw new QuartoException("Não temos quartos do tipo escolhido disponível no momento !");
@@ -68,6 +76,20 @@ public class ViewControllerQuarto {
 
     }
     
+    public static void setTipoDaCama(boolean tipo){
+        tipoDaCama = tipo;
+    }
 
-    
+    public static void setChave(int chaveAtual){
+        chave = chaveAtual;
+    }
+
+    public static boolean getTipoDaCama(){
+        return tipoDaCama;
+    }
+
+    public static int getChave(){
+        return chave;
+    }
+
 }
