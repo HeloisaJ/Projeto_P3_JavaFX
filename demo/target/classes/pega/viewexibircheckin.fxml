@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="800.0">
          <children>
-            <Button fx:id="btVoltarCliente" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#btVoltarCliente" text="Voltar" textFill="#970b0b">
+            <Button fx:id="btVoltarCliente" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" onAction="#voltarParaViewCliente" text="Voltar" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
