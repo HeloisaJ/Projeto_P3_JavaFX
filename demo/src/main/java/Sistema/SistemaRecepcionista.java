@@ -83,7 +83,7 @@ public class SistemaRecepcionista {
         return -1;
     }
 
-    public static LinkedList<Cliente> exibirClientesParaCheckInHoje() throws IndexOutOfBoundsException, DataException{
+    public static LinkedList<Cliente> exibirClientesParaCheckInHoje(){
         int size = clientesParaCheckIn.size();
         LinkedList<Cliente> listaExibir = new LinkedList<>();
         for(int i = 0; i < size; i++){ 
@@ -94,13 +94,13 @@ public class SistemaRecepcionista {
         return listaExibir;
     }
 
-    public static LinkedList<Cliente> exibirClientesHospedados() throws ClienteException{
+    public static LinkedList<Cliente> exibirClientesHospedados(){
         LinkedList<Cliente> listaExibir = new LinkedList<>();
         percorrerLista(clientesHospedados, listaExibir);
         return listaExibir;
     }
 
-    public static LinkedList<Cliente> exibirClientesParaCheckOutHoje() throws IndexOutOfBoundsException, DataException{ 
+    public static LinkedList<Cliente> exibirClientesParaCheckOutHoje(){ 
         int size = clientesHospedados.size();
         LinkedList<Cliente> listaExibir = new LinkedList<>();
         for(int i = 0; i < size; i++){
@@ -111,7 +111,7 @@ public class SistemaRecepcionista {
         return listaExibir;
     }
 
-    public static LinkedList<Cliente> exibirTodosOsClientes() throws ClienteException{
+    public static LinkedList<Cliente> exibirTodosOsClientes(){
         LinkedList<Cliente> listaExibir = new LinkedList<>();
         percorrerLista(clientesParaCheckIn, listaExibir);
         percorrerLista(clientesHospedados, listaExibir);

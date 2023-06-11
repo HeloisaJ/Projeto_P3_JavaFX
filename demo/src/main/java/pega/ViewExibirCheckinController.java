@@ -1,4 +1,6 @@
 package pega;
+
+import javafx.fxml.Initializable;
 import Funcionario.Funcionario;
 import Funcionario.ListaFuncionarios;
 import Sistema.SistemaRecepcionista;
@@ -6,7 +8,6 @@ import TipoPessoa.Cliente.Cliente;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -16,9 +17,9 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
-public class ViewExibirCheckinController {
+public class ViewExibirCheckinController implements Initializable {
     @FXML
-    private TableView<Cliente> tabelaClieNtes;
+    private TableView<Cliente> tabelaClientes;
     @FXML
     private TableColumn<Cliente, String> colunaNome;
     @FXML
@@ -36,6 +37,7 @@ public class ViewExibirCheckinController {
     @FXML
     private Button btVoltarCliente;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //associa as colunas aos atributos da classe Funcionario
@@ -50,14 +52,12 @@ public class ViewExibirCheckinController {
         //adiciona os objetos da lista encadeada ao TableView
         LinkedList<Cliente> clientes = SistemaRecepcionista.exibirClientesParaCheckInHoje();
         ObservableList<Cliente> clienteObservable = FXCollections.observableArrayList(clientes);
-        tabelaClieNtes.setItems(clienteObservable);
+        tabelaClientes.setItems(clienteObservable);
     }
+
 
     @FXML
-    private void btVoltarCliente() throws IOException{
+    private void voltarParaViewCliente() throws IOException{
         App.setRoot("viewcliente");
-
     }
-
-    
 }
