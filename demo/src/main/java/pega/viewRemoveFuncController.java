@@ -34,6 +34,7 @@ public class viewRemoveFuncController {
 
     @FXML
     private void btVoltarlogin() throws IOException{
+        App.stage.setTitle("Tela inicial");
         App.setRoot("viewinicial");
 
     }

@@ -43,7 +43,7 @@ public class ViewAddFuncController {
 
     @FXML
     private void btVoltarlogin() throws IOException{
-        App.stage.setTitle("Tela inicial");
+        App.stage.setTitle("Tela do funcionario");
         App.setRoot("viewinicial");
     }
         

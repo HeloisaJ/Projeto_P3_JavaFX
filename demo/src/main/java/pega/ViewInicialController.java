@@ -15,26 +15,27 @@ public class ViewInicialController implements inface{
 
     @FXML
     public void btLoginFunc() throws IOException{
-        App.stage.setTitle("Tela de login");
+        App.stage.setTitle("Tela do login");
         App.setRoot("viewlogin");
 
     }
     @FXML
     private void onbtremoveFunc() throws IOException{
-        App.stage.setTitle("Tela de remoção");
+        App.stage.setTitle("Remoção de funcionario");
         App.setRoot("viewremovefunc");
 
     }
     @FXML
     private void btAddFunc() throws IOException{
-        App.stage.setTitle("Tela de registro");
+        App.stage.setTitle("Registro de funcionario");
         App.setRoot("viewaddfunc");
 
-    }
+    } 
+
 
     @FXML
     private void btExibirFunc() throws IOException{
-        App.stage.setTitle("Tela de Exibição");
+        App.stage.setTitle("Exibição de funcionarios");
         App.setRoot("viewexibirfunc");
 
     }

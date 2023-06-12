@@ -25,26 +25,31 @@ public class ViewClienteController implements inface{
 
     @FXML
     public void onbtChequeQuarto() throws IOException{
+        App.stage.setTitle("Checagem de quarto");
         App.setRoot("viewquarto");
     }
     @FXML
     public void btSairConta() throws IOException{
+        App.stage.setTitle("Tela inicial");
         App.setRoot("viewinicial");
     }
 
     @FXML
     private void btCheckin() throws IOException{
+        App.stage.setTitle("Check in");
         App.setRoot("viewcheckin");
 
     }
     @FXML
     private void btCheckout() throws IOException{
+        App.stage.setTitle("Check out");
         App.setRoot("viewcheckout");
 
     }
 
     @FXML
     private void btExibirCheckin() throws IOException{
+        App.stage.setTitle("Clientes para check in");
         App.stage.setWidth(800);
         App.stage.setHeight(500);
         App.setRoot("viewexibircheckin");
@@ -52,6 +57,7 @@ public class ViewClienteController implements inface{
     }
     @FXML
     private void btExibirCheckout() throws IOException{
+        App.stage.setTitle("Clientes para check out");
         App.stage.setWidth(800);
         App.stage.setHeight(500);
         App.setRoot("viewexibircheckout");
@@ -59,6 +65,7 @@ public class ViewClienteController implements inface{
     }
     @FXML
     private void btExibirTodos() throws IOException{
+        App.stage.setTitle("Todos clientes");
         App.stage.setWidth(800);
         App.stage.setHeight(500);
         App.setRoot("viewexibirtodos");
@@ -66,6 +73,7 @@ public class ViewClienteController implements inface{
     }
     @FXML
     public void onbtExibirHospedados() throws IOException{
+        App.stage.setTitle("Hospedes");
         App.stage.setWidth(800);
         App.stage.setHeight(500);
         App.setRoot("viewexibirhospedes");

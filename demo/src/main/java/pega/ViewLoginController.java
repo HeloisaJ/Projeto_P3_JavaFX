@@ -23,6 +23,7 @@ public class ViewLoginController {
             String nomeFuncionario = txtNome.getText();
             String senhaFuncionario = txtSenha.getText();
             ListaFuncionarios.loginFuncionario(nomeFuncionario, senhaFuncionario);
+            App.stage.setTitle("Tela do funcionario");
             App.setRoot("viewcliente");
         }
         catch (Exception e) {
@@ -32,6 +33,7 @@ public class ViewLoginController {
 
     @FXML
     private void btVoltarlogin() throws IOException{
+        App.stage.setTitle("Tela inicial");
         App.setRoot("viewinicial");
 
     }

@@ -57,6 +57,7 @@ public class ViewExibirHospedesController implements Initializable{
 
     @FXML
     private void voltarParaViewCliente() throws IOException{
+        App.stage.setTitle("Tela do funcionario");
         App.stage.setWidth(500);
         App.stage.setHeight(500);
         App.setRoot("viewcliente");

@@ -66,12 +66,14 @@ public class ViewControllerQuarto {
     @FXML
     private void onBtregistrarClient() throws IOException{
         //mudança de tela para completar preenchimento de dados
+        App.stage.setTitle("Registro de cliente");
         App.setRoot("viewaddcliente");
         
     }
 
     @FXML
     private void btVoltarlogin() throws IOException{
+        App.stage.setTitle("Tela do funcionario");
         App.setRoot("viewcliente");
 
     }

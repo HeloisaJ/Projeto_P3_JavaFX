@@ -36,6 +36,7 @@ public class ViewCheckoutController {
 
     @FXML
     private void btVoltarCliente() throws IOException{
+        App.stage.setTitle("Tela do funcionario");
         App.setRoot("viewcliente");
 
     }
