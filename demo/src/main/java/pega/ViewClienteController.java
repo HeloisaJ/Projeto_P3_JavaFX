@@ -18,6 +18,8 @@ public class ViewClienteController implements inface{
     private Button btExibirCheckout;
     @FXML
     private Button btExibirTodos;
+    @FXML
+    private Button btExibirHospedados;
     
 
 
@@ -56,10 +58,8 @@ public class ViewClienteController implements inface{
         App.setRoot("viewexibirtodos");
 
     }
-
-    //@Override
-    public void initialize(){
-        System.out.println("comando inicial");
-
+    @FXML
+    public void onbtExibirHospedados() throws IOException{
+        App.setRoot("viewexibirhospedes");
     }
 }

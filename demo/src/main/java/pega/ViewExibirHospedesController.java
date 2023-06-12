@@ -49,7 +49,7 @@ public class ViewExibirHospedesController implements Initializable{
         colunaSituacao.setCellValueFactory(new PropertyValueFactory<>("situacao"));
 
         //adiciona os objetos da lista encadeada ao TableView
-        LinkedList<Cliente> clientes = SistemaRecepcionista.exibirClientesParaCheckOutHoje();
+        LinkedList<Cliente> clientes = SistemaRecepcionista.exibirClientesHospedados();
         ObservableList<Cliente> clienteObservable = FXCollections.observableArrayList(clientes);
         tabelaClientes.setItems(clienteObservable);
     }
