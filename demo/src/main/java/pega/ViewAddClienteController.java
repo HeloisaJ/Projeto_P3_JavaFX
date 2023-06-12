@@ -38,6 +38,7 @@ public class ViewAddClienteController {
             boolean tipoCama = ViewControllerQuarto.getTipoDaCama();
             String nome = txtnome.getText();
             String extra = txtextra.getText();
+            extra = extra.toLowerCase();
             String telefone = txttelefone.getText();
             String cpf = txtCPF.getText();
             String quantidadeDiasSTR = txtQuantidadeDias.getText();
@@ -56,8 +57,11 @@ public class ViewAddClienteController {
             String anoSTR = txtAno.getText();
             int anoNum = Integer.parseInt(anoSTR);
             Calendar diaDoCheckIn = new GregorianCalendar(anoNum, mesNum, diaNum);
-            SistemaRecepcionista.reserva(nome, cpf, telefone, quantidadeDiasNum, diaDoCheckIn, tipoCama, chave, 'S');
+            SistemaRecepcionista.reserva(nome, cpf, telefone, quantidadeDiasNum, diaDoCheckIn, tipoCama, chave, extra);
             ThrowAlerta.exibirAlertaConfirmacao("SUCESSO", "Novo cliente adicionado com sucesso !");
+        }
+        catch(NumberFormatException e){
+            ThrowAlerta.exibirAlertaErro("ERRO", "Um ou mais campos estão vazios ou com valores inválidos.");
         }
         catch(Exception e){
             //toda vez que quiser lancar um alerta, chamar a classe e a funcao, depois digitar o titulo e a mensagem que querem

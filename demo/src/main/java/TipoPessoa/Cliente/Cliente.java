@@ -20,7 +20,7 @@ public class Cliente extends Pessoa implements ClienteInterface{
     private double valorDosExtras; // Uma cama extra
    
 
-    private Cliente(String nome, String cpf, String celular, int diasDeHospedagem, Calendar diaDoCheckIn, boolean tipoCama, int chave, char extras) throws CpfException, NomeException, DataException, OpcaoExtrasException, CelularException{
+    private Cliente(String nome, String cpf, String celular, int diasDeHospedagem, Calendar diaDoCheckIn, boolean tipoCama, int chave, String extras) throws CpfException, NomeException, DataException, OpcaoExtrasException, CelularException{
         super(nome, cpf, celular);
         ValidacaoCliente.validarDiasDeHospedagem(diasDeHospedagem);
         this.diasDeHospedagem = diasDeHospedagem;
@@ -40,7 +40,7 @@ public class Cliente extends Pessoa implements ClienteInterface{
         this.situacao = SituacaoEnum.RESERVA;
 
         ValidacaoCliente.ValidarExtras(extras);
-        if(extras == 'S'){
+        if(extras.equals("sim")){
             this.valorDosExtras = 100;
         }
         else{
@@ -148,7 +148,7 @@ public class Cliente extends Pessoa implements ClienteInterface{
         private Calendar diaDoCheckIn;
         private boolean tipoCama;
         private int chave;
-        private char extras;
+        private String extras;
 
         public ClienteBuilder nome(String nome){
             this.nome = nome;
@@ -185,7 +185,7 @@ public class Cliente extends Pessoa implements ClienteInterface{
             return this;
         }
 
-        public ClienteBuilder extras(char extras){
+        public ClienteBuilder extras(String extras){
             this.extras = extras;
             return this;
         }

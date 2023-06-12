@@ -62,4 +62,8 @@ public class ViewClienteController implements inface{
     public void onbtExibirHospedados() throws IOException{
         App.setRoot("viewexibirhospedes");
     }
+    @Override
+    public void initialize() {
+        System.out.println("Inicializado sistema");
+    }
 }

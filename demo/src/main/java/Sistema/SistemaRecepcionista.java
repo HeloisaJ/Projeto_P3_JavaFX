@@ -22,7 +22,7 @@ public class SistemaRecepcionista {
         this.clientesHospedados = new LinkedList<Cliente>();
     }*/
 
-    public static void reserva(String nome, String cpf, String celular, int diasHospedagem, Calendar diaDoCheckIn, boolean tipoCama, int chave, char extras) throws CpfException, NomeException, DataException, OpcaoExtrasException, CelularException{
+    public static void reserva(String nome, String cpf, String celular, int diasHospedagem, Calendar diaDoCheckIn, boolean tipoCama, int chave, String extras) throws CpfException, NomeException, DataException, OpcaoExtrasException, CelularException{
         Cliente novo = new Cliente.ClienteBuilder()
             .nome(nome)
             .cpf(cpf)

@@ -40,9 +40,9 @@ public class ValidacaoCliente {
         }
     }
 
-    public static void ValidarExtras(char extras) throws OpcaoExtrasException{
-        if(extras != 'S' && extras != 'N'){
-            throw new OpcaoExtrasException("Opção inválida nos extras! Digite S ou N para escolher qual opção.");
+    public static void ValidarExtras(String extras) throws OpcaoExtrasException{
+        if(!extras.equals("sim") && extras.equals("não")){
+            throw new OpcaoExtrasException("Opção inválida nos extras! Digite sim ou não para escolher qual opção.");
         }
     }
 
