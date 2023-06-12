@@ -46,6 +46,8 @@ tabelaFuncionarios.setItems(funcionariosObservable);
 
 @FXML
 private void onbtVoltar() throws IOException{
+    App.stage.setWidth(500);
+    App.stage.setHeight(500);
     App.setRoot("viewinicial");
 
 }

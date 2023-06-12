@@ -54,6 +54,8 @@ public void initialize(URL location, ResourceBundle resources) {
 
 @FXML
 private void voltarParaViewCliente() throws IOException{
+    App.stage.setWidth(500);
+    App.stage.setHeight(500);
     App.setRoot("viewcliente");
 }
 }

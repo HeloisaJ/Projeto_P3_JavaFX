@@ -57,6 +57,8 @@ public class ViewExibirCheckoutcController implements Initializable{
 
     @FXML
     private void voltarParaViewCliente() throws IOException{
+        App.stage.setWidth(500);
+        App.stage.setHeight(500);
         App.setRoot("viewcliente");
     }
 }

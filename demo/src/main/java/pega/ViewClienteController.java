@@ -45,21 +45,29 @@ public class ViewClienteController implements inface{
 
     @FXML
     private void btExibirCheckin() throws IOException{
+        App.stage.setWidth(800);
+        App.stage.setHeight(500);
         App.setRoot("viewexibircheckin");
 
     }
     @FXML
     private void btExibirCheckout() throws IOException{
+        App.stage.setWidth(800);
+        App.stage.setHeight(500);
         App.setRoot("viewexibircheckout");
 
     }
     @FXML
     private void btExibirTodos() throws IOException{
+        App.stage.setWidth(800);
+        App.stage.setHeight(500);
         App.setRoot("viewexibirtodos");
 
     }
     @FXML
     public void onbtExibirHospedados() throws IOException{
+        App.stage.setWidth(800);
+        App.stage.setHeight(500);
         App.setRoot("viewexibirhospedes");
     }
     @Override

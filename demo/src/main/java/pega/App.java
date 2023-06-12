@@ -24,6 +24,8 @@ public class App extends Application {
         scene = new Scene(loadFXML("viewinicial"), 500, 500);
         stage.setScene(scene);
         stage.setTitle("Tela incial");
+        stage.setWidth(500);
+        stage.setHeight(500);
         stage.show();
         SistemaDeQuartos.inicializarQuartos();
         this.stage = stage;

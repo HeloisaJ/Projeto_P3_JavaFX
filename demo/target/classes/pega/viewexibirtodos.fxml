@@ -24,12 +24,12 @@
             <TableView fx:id="tabelaClientes" layoutX="29.0" layoutY="69.0" prefHeight="310.0" prefWidth="702.0">
               <columns>
                 <TableColumn fx:id="colunaNome" prefWidth="100.0" text="Nome:" />
-                <TableColumn fx:id="colunaCPF" prefWidth="100.0" text="Cpf:" />
+                <TableColumn fx:id="colunaCPF" prefWidth="100.0" text="CPF:" />
                   <TableColumn fx:id="colunaTelefone" prefWidth="100.0" text="celular:" />
                   <TableColumn fx:id="colunaQuarto" prefWidth="90.0" text="Quarto:" />
-                  <TableColumn fx:id="colunaDiaDoCheckIn" prefWidth="100.0" text="dia do check in:" />
-                  <TableColumn fx:id="colunaDiaDoCheckOut" prefWidth="110.0" text="dia do check out:" />
-                  <TableColumn fx:id="colunaSituacao" prefWidth="100.0" text="situação:" />
+                  <TableColumn fx:id="colunaDiaDoCheckIn" prefWidth="100.0" text="Dia do check in:" />
+                  <TableColumn fx:id="colunaDiaDoCheckOut" prefWidth="110.0" text="Dia do check out:" />
+                  <TableColumn fx:id="colunaSituacao" prefWidth="100.0" text="Situação:" />
               </columns>
             </TableView>
             <Label layoutX="258.0" layoutY="33.0" text="Lista de todos os clientes" textFill="#970b0b">

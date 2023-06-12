@@ -15,7 +15,7 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="500.0">
          <children>
-            <Label layoutX="117.0" layoutY="32.0" text="cadastro de funcionario" textFill="#960c0c">
+            <Label layoutX="117.0" layoutY="32.0" text="Cadastro de funcionario" textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>

@@ -15,7 +15,7 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="500.0">
          <children>
-            <Label layoutX="164.0" layoutY="60.0" text="digite os dados do cliente" textFill="#960c0c">
+            <Label layoutX="164.0" layoutY="60.0" text="Digite os dados do cliente" textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
@@ -35,7 +35,7 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Label layoutX="127.0" layoutY="14.0" text="cadastro de hospede " textFill="#960c0c">
+            <Label layoutX="127.0" layoutY="14.0" text="Cadastro de hospede " textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -47,7 +47,7 @@
                </font>
             </Label>
             <TextField fx:id="txtCPF" layoutX="163.0" layoutY="140.0" promptText="CPF:" />
-            <Label layoutX="195.0" layoutY="200.0" text="cama extra?" textFill="#960c0c">
+            <Label layoutX="195.0" layoutY="200.0" text="Cama extra?" textFill="#960c0c">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>

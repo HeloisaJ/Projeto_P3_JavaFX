@@ -15,7 +15,7 @@
    <children>
       <AnchorPane prefHeight="493.0" prefWidth="496.0">
          <children>
-            <Button fx:id="chequeDisponibilidade" layoutX="155.0" layoutY="176.0" mnemonicParsing="false" onAction="#onBtchequeDisponibilidade" text="cheque disponibilidade" textAlignment="CENTER" textFill="#970b0b">
+            <Button fx:id="chequeDisponibilidade" layoutX="155.0" layoutY="176.0" mnemonicParsing="false" onAction="#onBtchequeDisponibilidade" text="Cheque disponibilidade" textAlignment="CENTER" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
@@ -36,11 +36,11 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="Chave" layoutX="230.0" layoutY="240.0" text="Label" textFill="#970b0b">
+            <Label fx:id="Chave" layoutX="230.0" layoutY="240.0" prefHeight="17.0" prefWidth="32.0" textFill="#970b0b">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font></Label>
-            <Label layoutX="116.0" layoutY="230.0" prefHeight="36.0" prefWidth="138.0" text="chave encontrada =" textAlignment="CENTER" textFill="#970b0b">
+            <Label layoutX="116.0" layoutY="230.0" prefHeight="36.0" prefWidth="138.0" text="Chave encontrada =" textAlignment="CENTER" textFill="#970b0b">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>

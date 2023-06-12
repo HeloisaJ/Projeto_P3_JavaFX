@@ -38,6 +38,7 @@ public class ViewAddClienteController {
             boolean tipoCama = ViewControllerQuarto.getTipoDaCama();
             String nome = txtnome.getText();
             String extra = txtextra.getText();
+            System.out.println(extra);
             extra = extra.toLowerCase();
             String telefone = txttelefone.getText();
             String cpf = txtCPF.getText();
